@@ -1,0 +1,1067 @@
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #050505; /* Заодно сразу тёмный фон сайта */
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  align-items: center; /* Выравнивает все элементы строго по вертикальному центру */
+  justify-content: space-between; /* Распределяет: лево — центр — право */
+  padding: 20px 145px; /* Отступы от краев экрана: 20px сверху/снизу, 60px по бокам */
+  background-color: #050505; /* Черный фон шапки */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Настраиваем левое и правое меню (контейнеры для ссылок) */
+.headbar,
+.headbar2 {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Расстояние МЕЖДУ ссылками, чтобы они не слипались */
+}
+
+/* 3. Оформляем ВСЕ ссылки в шапке */
+.headbar a,
+.headbar2 a {
+  color: #999999; /* Светло-серый цвет текста */
+  text-decoration: none; /* Убирает синее подчеркивание */
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Плавная смена цвета при наведении */
+}
+
+/* Эффект при наведении на ссылку */
+.headbar a:hover,
+.headbar2 a:hover {
+  color: #ffffff; /* При наведении ссылка становится ярко-белой */
+}
+
+/* 4. Настраиваем логотип по центру */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Отступ между звездочкой и текстом */
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Если у h2 стояли стандартные отступы браузера — сбрасываем их */
+.osnov {
+  margin: 0;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.star-icon {
+  color: #ffffff;
+  border: #e0e0e0;
+  border-radius: 10px;
+  border-color: #ffffff;
+}
+
+/* 5. Кнопка Get Started в шапке */
+.btn-get-started {
+  background-color: #ffffff;
+  color: #000000d2 !important; /* Делаем текст внутри кнопки черным */
+  padding: 14px 35px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.centr {
+  position: relative; /* Теперь блик будет привязан СТРОГО к первой секции */
+  overflow: hidden;   /* Обрезает свечение, чтобы оно не вылизало вниз и по бокам */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 100px auto 0 auto;
+  width: 80%;
+  padding-top: 90px;
+  padding-bottom: 190px;
+}
+.centr::before {
+  content: "";
+  position: absolute;
+  top: 80%; /* Ставит центр свечения ровно посредине первой секции */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 700px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.404); /* Чуть снизим яркость, чтобы не залезало ярко на текст */
+  border-radius: 80%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.pod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Теперь gap БУДЕТ работать и задавать точный отступ между строками */
+  padding-bottom: 50px;
+}
+
+.promptverse {
+  font-size: 40px;
+  font-weight: 550;
+  margin: 0; /* Убираем гигантский отступ браузера */
+}
+
+.promt {
+  font-size: 64px;
+  font-weight: 500;
+  margin: 0; /* Убираем гигантский отступ браузера */
+  line-height: 1.1; /* Сжимаем строки внутри самого заголовка */
+}
+
+.promt2 {
+  margin: 10; /* Убираем отступ у нижнего текста */
+  color: #999999;
+  font-size: 17px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.start{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  color: #e0e0e0de;
+  border-radius: 22px;
+  padding: 6px 15px;
+  border: 2px solid rgb(255, 255, 255);
+  gap: 10px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.download{
+  display: flex;
+  align-items: center;
+  background-color: beige;
+  border-radius: 22px;
+  padding: 5px 33px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+  border-color: transparent;
+}
+
+/* Вся секция */
+.features {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* Шапка секции */
+.features-header h2 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.features-header p {
+  font-size: 15px;
+  color: #888888;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  line-height: 1.5;
+}
+
+/* Сетка из 3 колонок */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 1400px; /* Было 1200px, сделаем 1400px, чтобы карточки растянулись */
+  margin: 0 auto;
+}
+
+/* Отдельная карточка */
+.card {
+  background-color: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px 20px; /* Небольшие вертикальные отступы */
+  text-align: left;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card p {
+  color: #ffffff;
+  font-size: 13px; /* Уменьшаем размер шрифта, чтобы текст влезал в 1-2 строки */
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.card a {
+  color: #3b82f6;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(6) {
+  transform: translateX(20px);
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптив под мобилки */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* 1 колонка на телефонах */
+  }
+}
+
+.imgg{
+  display: flex;
+  width: 1400px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 260px;
+  margin-top: 100px;
+  padding-bottom: 60px;
+}
+
+.imgg img{
+  max-width: 100%;
+}
+
+.trending img{
+  max-width: 75%;
+  padding-top: 70px;
+  padding-bottom: 270px;
+}
+
+/* Общий контейнер секции */
+.enhance-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 40px;
+}
+
+.enhance-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  background-color: #0b0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 48px;
+  width: 85% !important;        /* Занимает 80% от ширины экрана */
+  max-width: 1200px !important; /* Жесткий лимит по ширине */
+  margin: 0 auto !important;
+}
+
+/* Левая колонка */
+.enhance-content {
+  flex: 1;
+  text-align: left;
+}
+
+.enhance-content h2 {
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.enhance-content .desc {
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.enhance-content .link-more {
+  display: inline-block;
+  color: #888888;
+  font-size: 14px;
+  text-decoration: underline;
+  margin-bottom: 32px;
+}
+
+/* Группа тегов и кнопки */
+.tags-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.btn-generate {
+  padding: 10px 24px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Правая колонка (Медиа) */
+.enhance-media {
+  flex: 1;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.enhance-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Кнопка Play по центру изображения */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 40px 0 50px 0; /* Верхний и нижний отступы */
+}
+
+.features2{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 55px;
+  font-weight: 500;
+  flex-direction: column;
+  color: #e0e0e0ce;
+  padding-top: 200px;
+}
+
+
+.last {
+ width: 95%;
+  max-width: 1600px; /* Сетка и линия уйдут максимально к краям */
+  margin: 100px auto;
+  padding: 0 20px;
+  padding-bottom: 150px;
+
+}
+
+/* Заголовок и линия */
+.last-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12); /* Тонкая линия под заголовком */
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+.last-header h2 {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+/* Цвета слов в заголовке */
+.more-features-header .text-gray {
+  color: #777777;
+}
+
+.more-features-header .text-white {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.more-features-header .text-muted {
+  color: #555555;
+}
+
+/* Сетка из 3 колонок */
+.more-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 32px; /* 48px между рядами, 32px между колонками */
+}
+
+/* Текстовые блоки */
+.feature-item h3 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.feature-item p {
+  color: #888888;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 350px;
+}
+
+/* Адаптив для планшетов и телефонов */
+@media (max-width: 900px) {
+  .more-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .more-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .more-features-header h2 {
+    font-size: 32px;
+  }
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 300px;
+  position: relative;
+  width: 90%;
+  max-width: 1300px;
+  margin: 100px auto;
+  padding: 80px 40px;
+  
+  /* Темный радиальный градиент (высветление по центру) */
+  background: radial-gradient(circle at center, #18181b 0%, #080808 100%);
+  
+  /* Граница и скругление углов */
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  border-radius: 20px;
+  
+  text-align: center;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.089); /* Делает звездочки контурными */
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Позиционирование и размеры звездочек из Figma */
+.star-left-big {
+  font-size: 180px;
+  top: 10%;
+  left: -40px;
+}
+
+.star-left-small {
+  font-size: 40px;
+  top: 20%;
+  left: 220px;
+}
+
+.star-right-top {
+  font-size: 70px;
+  top: 15%;
+  right: 50px;
+}
+
+.star-right-bottom {
+  font-size: 45px;
+  bottom: 15%;
+  right: 200px;
+}
+
+.hm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1300px;
+  text-align: center;
+}
+
+.footer2{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+z-index: 2;
+}
+
+.btn-hm{
+  background-color: #ffffff;
+  color: #000000d2 !important; /* Делаем текст внутри кнопки черным */
+  padding: 14px 35px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+ююю
+
+.site-footer {
+  width: 100%;
+  background-color: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 80px 0 30px 0;
+  color: #888888;
+  font-family: inherit;
+}
+
+.footer-container {
+  width: 90%;          /* Занимает 90% ширины экрана */
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-title {
+  color: #555555;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+/* Навигация */
+.footer-nav {
+  flex: 1;
+}
+
+.nav-links-grid {
+  display: flex;
+  gap: 120px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 12px;
+}
+
+.nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+
+.nav-list a:hover {
+  opacity: 0.7;
+}
+
+/* Правая колонка */
+.footer-info {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.contact-row p, .contact-row a {
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  text-decoration: none;
+}
+
+.social-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.icon-circle:hover {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.location-text {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Нижняя сервисная плашка */
+.footer-bottom {
+  max-width: 1450px;
+  margin: 100px auto 0 auto;
+  padding: 0 20px;
+  margin-top: -0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 12px;
+  color: #444444;
+}
+
+.legal-info p {
+  margin: 2px 0;
+}
+
+.copyright-center {
+  color: #555555;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 12px;
+}
+
+.lang-switch span {
+  cursor: pointer;
+  color: #555555;
+}
+
+.lang-switch span.active {
+  color: #ffffff;
+}
+
+
+/* --------------------------java----------------------------------------------------*/
+
+/* Оверлей (фон с размытием) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Класс для открытия модалки */
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Карточка окна */
+.modal-card {
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0);
+}
+
+/* Кнопка закрытия (крестик) */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+.modal-header h3 {
+  color: #fff;
+  font-size: 22px;
+  margin: 0 0 8px 0;
+}
+
+.modal-header p {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+/* Форма и инпуты */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.input-group label {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.input-group input {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #ffffff;
+}
+
+/* Кнопка отправки */
+.btn-submit {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+  background: #e4e4e7;
+}
+
+/* Стиль кнопки профиля после авторизации */
+.user-profile-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 14px 6px 8px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Контейнер профиля в шапке */
+.user-profile-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 16px 6px 8px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.user-profile-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Круглая аватарка с первой буквой */
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Обертка для профиля с относительно позиционированием */
+.user-profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Выпадающее меню */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px;
+  width: 140px;
+  display: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.profile-dropdown.show {
+  display: block;
+}
+
+/* Кнопка Выйти */
+.btn-logout {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 77, 77, 0.1);
+}
+
+
+
+/* Доп. стили для окна генерации */
+.generator-card {
+  max-width: 550px;
+}
+
+.generator-body textarea {
+  width: 100%;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.generator-body textarea:focus {
+  border-color: #ffffff;
+}
+
+/* Переключатели режимов */
+.generator-options {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.opt-btn {
+  flex: 1;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #888;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.opt-btn.active, .opt-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Окно вывода результата */
+.generate-result {
+  margin-top: 20px;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 80px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.generate-result.active {
+  display: flex;
+}
+
+/* Анимация загрузки */
+.loader {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Начальное состояние элементов до прокрутки */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Состояние при появлении в зоне видимости */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
